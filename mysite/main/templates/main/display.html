@@ -1,0 +1,32 @@
+{% extends "main/header.html" %}
+
+{% block content %}
+
+    <table class="highlight">
+        <thead>
+            <tr>
+                <th> Coupon Number </th>
+                <th> Patient Name </th>
+                <th> Patient Phone </th>
+                <th> PRO code </th>
+                <th> Coupon Status </th>
+                <th> Coupon Date </th>
+            </tr>
+
+            {% for patient in patients %}
+            	<tr>
+            		<td> {{patient.coupon_number}} </td>
+            		<td> {{patient.patient_name}} </td>
+            		<td> {{patient.patient_ph}} </td>
+            		<td> {{patient.pro_code}} </td>
+            		<td> {{patient.coupon_status}} </td>
+            		<td> {{patient.coupon_date}} </td>
+            	</tr>
+            {% endfor %}
+
+        </thead>
+    </table>
+      
+
+
+{% endblock %}
